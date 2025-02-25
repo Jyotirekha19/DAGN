@@ -1,0 +1,71 @@
+.case-histories-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.home-button:hover {
+    background-color: #7ED957;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.search-button {
+    padding: 10px;
+    background-color: #0097B2;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #7ED957;
+}
+
+.pdf-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pdf-card {
+    background-color: #fff;
+    border: 1px solid #0097B2;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.pdf-card:hover {
+    transform: scale(1.05);
+}
+
+.pdf-card a {
+    text-decoration: none;
+    color: #0097B2;
+}
+
+.pdf-card a:hover {
+    color: #7ED957;
+}

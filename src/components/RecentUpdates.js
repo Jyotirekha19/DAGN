@@ -192,56 +192,57 @@
 
 
 // RecentUpdates.jsx
+// 
+
+
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "./RecentUpdates.css"; // Create a CSS file for this component
-//import "https://unpkg.com/swiper/swiper-bundle.min.css";
-//import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css";
 
+import "./RecentUpdates.css";
 
 const RecentUpdates = () => {
   const newsData = [
     {
-      imgSrc: "news/s1.avif",
+      imgSrc: "news1.jpg",
       altText: "News 1 Image",
       link: "news/news1.html",
       title:
         "Centre defends electoral bonds, says 'more contribution to the ruling party is norm'",
     },
     {
-      imgSrc: "news/Recent Updates4381.png",
+      imgSrc: "n3.jpg",
       altText: "News 2 Image",
       link: "news/news2.html",
       title:
         "'Why no health advisories to citizens?' Bombay High Court on dangerous AQI levels",
     },
     {
-      imgSrc: "news/Recent Updates8057.png",
+      imgSrc: "w3.jpg",
       altText: "News 3 Image",
       link: "news/news3.html",
       title:
         "Wife demanding to live separately from husband not always cruelty: Calcutta High Court",
     },
     {
-      imgSrc: "news/Recent Updates111.png",
+      imgSrc: "n4.jpg",
       altText: "News 4 Image",
       link: "news/new4.html",
       title:
         "Firecracker restrictions: NGT calls for strict compliance; says celebrations can't be at the cost of health",
     },
     {
-      imgSrc: "news/new5.avif",
+      imgSrc: "n5.jpg",
       altText: "News 5 Image",
       link: "news/news5.html",
       title:
         "'Why no health advisories to citizens?' Bombay High Court on dangerous AQI levels",
     },
     {
-      imgSrc: "news/news6.avif",
+      imgSrc: "n6.jpg",
       altText: "News 6 Image",
       link: "news/news6.html",
       title:
@@ -253,13 +254,15 @@ const RecentUpdates = () => {
     <section className="recent-updates">
       <div className="container">
         <h2>Recent Updates</h2>
-        <Swiper
-          modules={[Navigation, Pagination]}
-          spaceBetween={30}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-        >
+       <Swiper
+  modules={[Navigation, Pagination, Autoplay]}
+  spaceBetween={30}
+  slidesPerView={1}
+  navigation
+  pagination={{ clickable: true }}
+  autoplay={{ delay: 3000, disableOnInteraction: false }} // Auto-slide every 3 seconds
+>
+
           {newsData.map((news, index) => (
             <SwiperSlide key={index}>
               <div className="news-image-container">
