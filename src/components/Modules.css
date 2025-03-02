@@ -1,0 +1,123 @@
+/* General Styling for Modules */
+.modules {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .module {
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .module:hover {
+    transform: translateY(-5px);
+  }
+  
+  .module img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .module-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .read-more-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .read-more-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  /* 🌟 Special Styling for Digital Assistance Module */
+  .digital-assistance {
+    background: linear-gradient(135deg, #4a90e2, #003366); /* New Blue Gradient */
+    color: white;
+    transform: scale(1.05);
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .digital-assistance img {
+    filter: brightness(1.2);
+  }
+  
+  .digital-assistance h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .digital-assistance p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  /* 🌟 New Hover Effect */
+  .digital-assistance:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 🌟 Styled Button */
+  .digital-assistance .read-more-link {
+    background: white;
+    color: #003366;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .digital-assistance .read-more-link:hover {
+    background: #f4f4f4;
+    color: #002244;
+    text-decoration: none;
+  }
+  
+  .module.digital-assistance,
+.module.discover-tools {
+  border: 3px solid #007bff; /* Blue highlighted border */
+  box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.7); /* Blue glowing effect */
+  background: linear-gradient(135deg, #f0f8ff, #a3d5ff); /* Light blue gradient */
+  color: #002244; /* Dark blue text for contrast */
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.module.digital-assistance h2,
+.module.discover-tools h2 {
+  font-family: 'Poppins', sans-serif; /* Stylish font */
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  animation: shimmer 2s infinite linear alternate;
+}
+
+@keyframes shimmer {
+  0% { color: #002244; text-shadow: 0 0 10px #007bff; }
+  100% { color: #007bff; text-shadow: 0 0 20px #fff; }
+}
+
+.module.digital-assistance:hover,
+.module.discover-tools:hover {
+  transform: scale(1.05); /* Smooth hover effect */
+  box-shadow: 0px 0px 25px rgba(0, 123, 255, 1); /* Intense blue glow on hover */
+}
