@@ -1,10 +1,33 @@
+header {
+  background-color: #035d85; /* Dark blue background */
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
-.header {
-    background-color: #005580;
-    padding: 20px 0;
-    text-align: center;
-    color: #fff;
-  }
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 1200px;
+}
 
+.logo img {
+  max-width: 80px; /* Adjust logo size */
+  margin-right: 15px;
+}
 
-  
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.title h1 {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}

@@ -70,7 +70,8 @@ const AboutSection = () => {
       <div className="container">
         <div className="about-content">
           <div className="about-text">
-            <h2>Welcome to Your Legal Hub</h2>
+          <h2 style={{ color: 'white' }}>Welcome to Your Legal Hub</h2>
+
             <p>Your one-stop destination for all your legal needs!</p>
             <p>Our goal is to make legal services accessible, convenient, and understandable for everyone.</p>
             <p>Join us on this journey towards legal empowerment, where knowledge meets opportunity.</p>

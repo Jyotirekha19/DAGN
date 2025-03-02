@@ -339,11 +339,9 @@
 // export default Signup;
 
 
-
-import "./Signup.css";
-
 import React, { useState } from "react";
 import axios from "axios";
+import "./Signup.css"; 
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -373,66 +371,31 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Create an Account</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-lg font-medium text-gray-700">Full Name</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your full name"
-              onChange={handleChange}
-              required
-              className="block w-full mt-1 px-4 py-2 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+    <div className="signup-container">
+      <h2>Create an Account</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="input-group">
+          <label>Full Name</label>
+          <input type="text" name="name" placeholder="Enter your full name" onChange={handleChange} required />
+        </div>
 
-          <div>
-            <label className="block text-lg font-medium text-gray-700">Email</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              onChange={handleChange}
-              required
-              className="block w-full mt-1 px-4 py-2 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+        <div className="input-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="Enter your email" onChange={handleChange} required />
+        </div>
 
-          <div>
-            <label className="block text-lg font-medium text-gray-700">Password</label>
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter password"
-              onChange={handleChange}
-              required
-              className="block w-full mt-1 px-4 py-2 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+        <div className="input-group">
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Enter password" onChange={handleChange} required />
+        </div>
 
-          <div>
-            <label className="block text-lg font-medium text-gray-700">Confirm Password</label>
-            <input
-              type="password"
-              name="confirmPassword"
-              placeholder="Confirm your password"
-              onChange={handleChange}
-              required
-              className="block w-full mt-1 px-4 py-2 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+        <div className="input-group">
+          <label>Confirm Password</label>
+          <input type="password" name="confirmPassword" placeholder="Confirm your password" onChange={handleChange} required />
+        </div>
 
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white text-lg font-semibold py-3 rounded-lg hover:bg-blue-600 transition duration-300"
-          >
-            Sign Up
-          </button>
-        </form>
-      </div>
+        <button type="submit" className="signup-button">Sign Up</button>
+      </form>
     </div>
   );
 };
